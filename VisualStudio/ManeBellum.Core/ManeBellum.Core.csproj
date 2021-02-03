@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,8 +44,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="Data\Battle.cs" />
+    <Compile Include="Data\Design.cs" />
+    <Compile Include="Data\Division.cs" />
+    <Compile Include="Data\Fleet.cs" />
+    <Compile Include="Data\GalacticMap.cs" />
+    <Compile Include="Data\GameCreator.cs" />
+    <Compile Include="Data\GameEvent.cs" />
+    <Compile Include="Data\GameEventLog.cs" />
+    <Compile Include="Data\GameStandardIds.cs" />
+    <Compile Include="Data\Hull.cs" />
+    <Compile Include="Data\IManeBellumGame.cs" />
+    <Compile Include="Data\Module.cs" />
+    <Compile Include="Data\NamedGameOject.cs" />
+    <Compile Include="Data\Nation.cs" />
+    <Compile Include="Data\Operation.cs" />
+    <Compile Include="Data\Planet.cs" />
+    <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\Ship.cs" />
+    <Compile Include="Data\SolarSystem.cs" />
+    <Compile Include="Data\SolarSystemObject.cs" />
+    <Compile Include="Data\Starbase.cs" />
+    <Compile Include="Data\ManeBellumGame.cs" />
+    <Compile Include="Data\StratgicPriorities.cs" />
+    <Compile Include="Data\TaskForce.cs" />
+    <Compile Include="Data\WarpLine.cs" />
+    <Compile Include="Engines\AbstractEngine.cs" />
+    <Compile Include="Engines\BudgetAllocationEngine.cs" />
+    <Compile Include="Engines\OperationResolutionEngine.cs" />
+    <Compile Include="Engines\SurveyAndExplorationEngine.cs" />
+    <Compile Include="Engines\TurnResolutionEngine.cs" />
+    <Compile Include="Persistence\GameLoader.cs" />
+    <Compile Include="Persistence\ReferenceDataLoader.cs" />
+    <Compile Include="Reference\GunData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\MyUtilities.cs" />
+    <Compile Include="Util\SortedObservableCollection.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Docs\design.html" />
+    <Content Include="Mods\readme.txt" />
+    <Content Include="Reference\gundata.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
